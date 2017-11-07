@@ -24,10 +24,10 @@ li{list-style:none}
 
 /* ---- base ---- */
 
-html,body{ 
+html,body{
 	width:100%;
 	height:100%;
-	background:#111;
+  color: #545454;
 }
 
 html{
@@ -88,15 +88,64 @@ canvas{
 .menu-bar {
   height: 5%;
   width: 100%;
-  background-color: #000000;
 }
 
 #particles-js{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   width: 100%;
   height: 100%;
-  background-color: #000000;
   background-image: url('');
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
+}
+
+/* ---- page style ---- */
+
+#page-card {
+  /*color: transparent;*/
+  pointer-events: none;
+  border: solid 30px white;
+  display: block;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+#page-card-inner {
+  border: solid 5px #d8d8d8;
+  padding-top: 128px;
+  padding-bottom: 64px;
+}
+
+.logo {
+  font-family: 'Halant', serif;
+  font-size: 64px;
+  margin-top: 48px;
+}
+
+.container {
+  width: 700px;
+  margin: 0 auto;
+}
+
+.container .body {
+  transform-origin: top;
+}
+
+.container p, .container span {
+  pointer-events: auto;
+}
+
+.container p {
+  line-height: 1.5;
+  font-size: 16px;
+  font-family: 'Poppins';
+  margin-top: 64px;
 }

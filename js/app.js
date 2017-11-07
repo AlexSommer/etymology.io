@@ -12,24 +12,24 @@ particlesJS.load('particles-js', 'particles.json', function() {
 /* Otherwise just put the config content (json): */
 
 particlesJS('particles-js',
-  
+
   {
     "particles": {
       "number": {
-        "value": 200,
+        "value": 300,
         "density": {
           "enable": true,
           "value_area": 800
         }
       },
       "color": {
-        "value": "#ffffff"
+        "value": "#676767"
       },
       "shape": {
         "type": "circle",
         "stroke": {
           "width": 0,
-          "color": "#000000"
+          "color": "#ffffff"
         },
         "polygon": {
           "nb_sides": 10
@@ -41,17 +41,17 @@ particlesJS('particles-js',
         }
       },
       "opacity": {
-        "value": 0.5,
+        "value": 0.1,
         "random": false,
         "anim": {
           "enable": false,
-          "speed": 1,
-          "opacity_min": 0.1,
+          "speed": 0.5,
+          "opacity_min": 0,
           "sync": false
         }
       },
       "size": {
-        "value": 0.1,
+        "value": 2.5,
         "random": true,
         "anim": {
           "enable": false,
@@ -62,16 +62,16 @@ particlesJS('particles-js',
       },
       "line_linked": {
         "enable": true,
-        "distance": 150,
-        "color": "#ffffff",
+        "distance": 128,
+        "color": "#c4c4c4",
         "opacity": 0.4,
         "width": 1
       },
       "move": {
         "enable": true,
-        "speed": 3,
-        "direction": "none",
-        "random": false,
+        "speed": 2,
+        "direction": "left",
+        "random": true,
         "straight": false,
         "out_mode": "out",
         "attract": {
@@ -90,7 +90,7 @@ particlesJS('particles-js',
         },
         "onclick": {
           "enable": true,
-          "mode": "push"
+          "mode": "repulse"
         },
         "resize": true
       },
@@ -109,7 +109,8 @@ particlesJS('particles-js',
           "speed": 3
         },
         "repulse": {
-          "distance": 200
+          "distance": 150,
+          "duration": 0.8
         },
         "push": {
           "particles_nb": 4
@@ -131,3 +132,53 @@ particlesJS('particles-js',
   }
 
 );
+
+
+/**
+ * Animation initialization
+ */
+
+anime({
+  targets: '#particles-js',
+  scale: 0.6,
+  opacity: 0.1,
+  duration: 0,
+});
+anime({
+  targets: '#particles-js',
+  scale: 1,
+  opacity: .7,
+  easing: 'easeOutExpo',
+  elasticity: 0,
+  duration: 2400,
+});
+
+anime({
+  targets: '.logo',
+  scale: 0.8,
+  opacity: 0,
+  duration: 0,
+});
+anime({
+  targets: '.logo',
+  opacity: 1,
+  scale: 1,
+  easing: 'easeOutQuad',
+  duration: 1400,
+  delay: 400
+});
+
+anime({
+  targets: '.body',
+  scale: 0.8,
+  opacity: 0,
+  duration: 0,
+});
+anime({
+  targets: '.body',
+  opacity: 1,
+  scale: 1,
+  easing: 'easeOutQuad',
+  duration: 1400,
+  delay: 500
+});
